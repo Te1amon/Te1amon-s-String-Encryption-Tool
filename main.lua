@@ -4,7 +4,7 @@ function EncryptString(lol)
     for i = 1, string.len(lol) do
         tablemabob[i] = string.sub(lol, i, i)
     end
-    wait()
+    --wait() -- global used on roblox lol
     for i, v in pairs(tablemabob) do
         if string.lower(v) == "a" then
             thing = string.byte("z")
@@ -112,4 +112,49 @@ function EncryptString(lol)
         end
     end
     return table.concat(tablemabobtwo)
+end
+
+function DecryptString(lole)
+    tablemabobe = {}
+    tablemabobtwoe = {}
+    numbermabob = 0
+    for i = 1, string.len(lole) do
+        tablemabobe[i] = string.sub(lole, i, i)
+    end
+    for i, v in pairs(tablemabobe) do
+        if string.lower(v) == "z" then
+            thing = "a"
+            table.insert(tablemabobtwoe, thing)
+        end
+        if string.lower(v) == "y" then
+            thing = "b"
+            table.insert(tablemabobtwoe, thing)
+        end
+        if string.lower(v) == "x" then
+            thing = "c"
+            table.insert(tablemabobtwoe, thing)
+        end
+        if string.lower(v) == "w" then
+            thing = "d"
+            table.insert(tablemabobtwoe, thing)
+        end
+        if string.lower(v) == "v" then
+            thing = "e"
+            table.insert(tablemabobtwoe, thing)
+        end
+        if string.lower(v) == "u" then
+            thing = "f"
+            table.insert(tablemabobtwoe, thing)
+        end
+        if string.lower(v) == "t" then
+            thing = "g"
+            table.insert(tablemabobtwoe, thing)
+        end
+        if string.lower(v) == "s" then
+            thing = "h"
+            table.insert(tablemabobtwoe, thing)
+        end
+        -- to do: actually finish this lmfao
+    end
+    return table.concat(tablemabobtwoe)
 end
